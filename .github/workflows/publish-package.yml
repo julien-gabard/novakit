@@ -1,10 +1,6 @@
 name: publish on github
 
 on:
-  # TODO for test
-  push:
-    branches:
-      - master
   release:
     types: [created]
 
