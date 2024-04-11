@@ -1,0 +1,35 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import * as Button from "./Button.stories.tsx";
+
+<Meta of={Button} title="Button" />
+
+# Button
+
+Button component with different props.
+
+#### Example
+
+<Canvas of={Button.Button} />
+
+## Usage
+
+```tsx
+import { Button } from "novakit";
+
+const Example = () => {
+  return (
+      <Button
+        text="Button"
+        onClick={()=> console.log("Clicked")}
+      />
+  );
+};
+
+export default Example;
+```
+
+#### Arguments
+
+- **text** _`() => void`_ - A string that represents the text content of the button.
+- **onClick** - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the click event on the button element.

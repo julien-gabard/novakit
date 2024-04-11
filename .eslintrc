@@ -1,0 +1,78 @@
+{
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+
+  "root": true,
+
+  "parser": "@typescript-eslint/parser",
+
+  "plugins": ["@typescript-eslint"],
+
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:storybook/recommended"
+  ],
+
+  "rules": {
+    "arrow-body-style": ["error", "as-needed"],
+    "curly": ["error", "all"],
+    "eqeqeq": "error",
+    "linebreak-style": ["error", "unix"],
+    "no-console": "off",
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "next": "*",
+        "prev": ["const"]
+      },
+      {
+        "blankLine": "any",
+        "next": ["const"],
+        "prev": ["const"]
+      },
+      {
+        "blankLine": "always",
+        "next": "return",
+        "prev": "*"
+      }
+    ],
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": true,
+        "object": true
+      }
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": false
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "sort-imports": ["error", {
+      "ignoreCase": false,
+      "ignoreDeclarationSort": false,
+      "ignoreMemberSort": false,
+      "memberSyntaxSortOrder": ["none", "all", "multiple", "single"],
+      "allowSeparatedGroups": true
+    }]
+  },
+
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

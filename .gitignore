@@ -1,0 +1,11 @@
+# Dependencies
+node_modules
+
+# Production
+dist
+storybook-static
+
+# Misc
+novakit.iml
+.idea
+yarn.lock
