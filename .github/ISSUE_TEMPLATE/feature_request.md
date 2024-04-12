@@ -1,9 +1,9 @@
 ---
 name: Feature request
 about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+title: "[FEATURE]"
+labels: documentation, enhancement
+assignees: julien-gabard
 
 ---
 
