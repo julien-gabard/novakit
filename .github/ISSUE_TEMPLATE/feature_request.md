@@ -10,6 +10,7 @@ assignees: julien-gabard
 **Description**
 ...
 
+**Steps**
 - [ ] Create component
 - [ ] Setting up the test(s)
 - [ ] Add documentation
