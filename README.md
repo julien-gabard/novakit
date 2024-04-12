@@ -10,7 +10,7 @@
 </p>
 <p align="center">
  <a href="https://novakit.netlify.app/">
-  <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" alt="web_site" />
+  <img src="https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge" alt="licence.md" />
  </a>
 </p>
 
@@ -121,14 +121,13 @@ https://github.com/julien-gabard/novakit.git
 ```  
 
 ## Versions
-**latest stable release** : [v1.0.0](https://github.com/julien-gabard/novakit/tags)
 
-**latest release** : [v1.0.0](https://github.com/julien-gabard/novakit/tags)
-
-> [List of all versions](https://github.com/julien-gabard/novakit/tags)
+[![Releases](https://img.shields.io/badge/Releases-v1.0.0-008000?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
+[![Beta](https://img.shields.io/badge/Beta-v1.0.0-red?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
+[![All](https://img.shields.io/badge/All-version-blue?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
 
 ## License
-This project is licensed under ``MIT`` - see the file [LICENSE.md](LICENSE.md) for more information.
+Released under [MIT](/LICENSE) by [@julien-gabard](https://github.com/julien-gabard)
 
 ## Contact
 [![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/julien-gabard)
