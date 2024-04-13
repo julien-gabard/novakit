@@ -9,10 +9,29 @@
  Is a library of React components, hooks and helpers with Typescript and Storybook.
 </p>
 <p align="center">
- <a href="https://novakit.netlify.app/">
-  <img src="https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge" alt="licence.md" />
- </a>
+  <a href="https://novakit.netlify.app/">
+    <img src="https://img.shields.io/badge/view-Documentation-blue?style=for-the-badge" alt="view_storybook_static" />
+  </a>
 </p>
+
+<p align="right">
+  Copyright © 2024 Gabard Julien. All rights reserved.
+</p>
+
+## Versions
+
+[![Releases](https://img.shields.io/badge/Releases-v1.0.0-008000?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
+[![Beta](https://img.shields.io/badge/Beta-v1.0.0-red?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
+[![All](https://img.shields.io/badge/All-version-blue?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
+
+## License
+Released under [MIT](/LICENSE) by [@julien-gabard](https://github.com/julien-gabard)
+
+## Contact
+[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/julien-gabard)
+[![](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:juliengabard@hotmail.fr)
+[![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julien-gabard/)
+[![](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/JulienGbd/)
 
 ## Made with
 [![react](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://fr.legacy.reactjs.org/)
@@ -118,19 +137,4 @@ https://github.com/julien-gabard/novakit.git
 ![yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
 ```bash  
  yarn test  
-```  
-
-## Versions
-
-[![Releases](https://img.shields.io/badge/Releases-v1.0.0-008000?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
-[![Beta](https://img.shields.io/badge/Beta-v1.0.0-red?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
-[![All](https://img.shields.io/badge/All-version-blue?style=for-the-badge)](https://github.com/julien-gabard/novakit/tags)
-
-## License
-Released under [MIT](/LICENSE) by [@julien-gabard](https://github.com/julien-gabard)
-
-## Contact
-[![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/julien-gabard)
-[![](https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white)](mailto:juliengabard@hotmail.fr)
-[![](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/julien-gabard/)
-[![](https://img.shields.io/badge/Facebook-%231877F2.svg?style=for-the-badge&logo=Facebook&logoColor=white)](https://www.facebook.com/JulienGbd/)
+```
