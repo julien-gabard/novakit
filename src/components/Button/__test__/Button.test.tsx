@@ -5,7 +5,7 @@ import Button from '../Button'
 
 describe('Button component', () => {
     it('Button should render correctly', () => {
-        render(<Button />)
+        render(<Button>Button</Button>)
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()

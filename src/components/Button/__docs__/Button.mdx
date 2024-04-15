@@ -10,19 +10,18 @@ Button component with different props.
 
 #### Example
 
-<Canvas of={Button.Button} />
+<Canvas of={Button.ButtonStory} />
 
 ## Usage
 
 ```tsx
-import { Button } from "novakit";
+import { Button } from "@julien-gabard/novakit";
 
 const Example = () => {
   return (
-      <Button
-        text="Button"
-        onClick={()=> console.log("Clicked")}
-      />
+      <Button>
+        {children}
+      </Button>
   );
 };
 
@@ -31,5 +30,10 @@ export default Example;
 
 #### Arguments
 
-- **text** _`() => void`_ - A string that represents the text content of the button.
-- **onClick** - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the click event on the button element.
+- **children** _`ReactNode`_ - Represents the content of the button.
+- **color** _`string`_ - Change the color button.
+- **hasBorderRadius** _`boolean`_ - Enabled border radius.
+- **isDisabled** _`boolean`_ - Makes the button not clickable.
+- **onClick** _`() => void`_ - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the click event on the button element.
+- **size** _`string`_ - Change button size.
+- **variant** _`string`_ - Change button style type.
