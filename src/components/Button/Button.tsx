@@ -1,6 +1,6 @@
 import { FC, MouseEventHandler, ReactElement, ReactNode } from 'react'
 
-import { colorType, size, variant } from '../../utils'
+import { colorType, sizeType, variantType } from '../../utils'
 import { StyledButton } from './styles'
 
 export interface ButtonProps {
@@ -9,8 +9,8 @@ export interface ButtonProps {
     hasBorderRadius: boolean
     isDisabled: boolean
     onClick?: MouseEventHandler<HTMLButtonElement>
-    size: size
-    variant: variant
+    size: sizeType
+    variant: variantType
 }
 
 const Button: FC<ButtonProps> = ({

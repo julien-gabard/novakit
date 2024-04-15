@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 
-import { colorType, defaultTheme, size, variant } from '../../utils'
+import { colorType, defaultTheme, sizeType, variantType } from '../../utils'
 
 export interface StyledButtonProps {
     $color: colorType
     $hasBorderRadius: boolean
-    $size: size
-    $variant: variant
+    $size: sizeType
+    $variant: variantType
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`

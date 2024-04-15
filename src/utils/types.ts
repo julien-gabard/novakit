@@ -6,6 +6,6 @@ export type colorType =
     | 'danger'
     | 'info'
 
-export type size = 'small' | 'medium' | 'large'
+export type sizeType = 'small' | 'medium' | 'large'
 
-export type variant = 'outlined' | 'contained' | 'text'
+export type variantType = 'outlined' | 'contained' | 'text'
