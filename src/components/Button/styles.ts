@@ -17,8 +17,13 @@ export const StyledButton = styled.button<StyledButtonProps>`
     outline: none;
     position: relative;
     text-transform: uppercase;
+    transition: all 100ms ease-in-out;
 
     -webkit-tap-highlight-color: transparent;
+
+    &:active {
+        transform: scale(0.95);
+    }
 
     &:disabled {
         cursor: default;
@@ -53,7 +58,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
                         color: ${textColor};
 
                         &:hover {
-                            filter: brightness(110%);
+                            filter: brightness(90%);
                         }
 
                         &:disabled {
