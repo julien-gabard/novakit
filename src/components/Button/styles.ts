@@ -10,13 +10,13 @@ export interface StyledButtonProps {
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
-    border-radius: ${({ $hasBorderRadius }) => ($hasBorderRadius ? '4px' : 0)};
+    align-items: center;
+    border-radius: ${({ $hasBorderRadius }) => ($hasBorderRadius ? '20px' : 0)};
     cursor: pointer;
     display: inline-flex;
-    line-height: 1.75;
+    justify-content: center;
     outline: none;
     position: relative;
-    text-transform: uppercase;
     transition: all 100ms ease-in-out;
 
     -webkit-tap-highlight-color: transparent;
@@ -121,15 +121,15 @@ export const StyledButton = styled.button<StyledButtonProps>`
         switch ($size) {
             case 'small':
                 return css`
-                    padding: 4px 10px;
+                    padding: 0.25rem 0.6rem;
                 `
             case 'medium':
                 return css`
-                    padding: 6px 16px;
+                    padding: 0.4rem 1rem;
                 `
             case 'large':
                 return css`
-                    padding: 8px 22px;
+                    padding: 0.5rem 1.4rem;
                 `
             default:
                 return ''
