@@ -1,4 +1,4 @@
-export type colorType =
+export type ColorType =
     | 'primary'
     | 'secondary'
     | 'success'
@@ -6,6 +6,6 @@ export type colorType =
     | 'danger'
     | 'info'
 
-export type sizeType = 'small' | 'medium' | 'large'
+export type SizeType = 'small' | 'medium' | 'large'
 
-export type variantType = 'outlined' | 'contained' | 'text'
+export type VariantType = 'outlined' | 'contained' | 'text'

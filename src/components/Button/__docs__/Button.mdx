@@ -1,39 +1,19 @@
-import { Canvas, Meta } from "@storybook/blocks";
+import {  Meta, Primary, Title, Description, Subtitle, Controls} from '@storybook/blocks'
 
 import * as Button from "./Button.stories.tsx";
 
 <Meta of={Button} title="Button" />
 
-# Button
+<Title />
+<Subtitle>Components</Subtitle>
+<Description />
 
-Button component with different props.
+## Default implementation
 
-#### Example
+<Primary />
 
-<Canvas of={Button.ButtonStory} />
+## Inputs
 
-## Usage
+The component accepts the following inputs (props):
 
-```tsx
-import { Button } from "@julien-gabard/novakit";
-
-const Example = () => {
-  return (
-      <Button>
-        {children}
-      </Button>
-  );
-};
-
-export default Example;
-```
-
-#### Arguments
-
-- **children** _`ReactNode`_ - Represents the content of the button.
-- **color** _`string`_ - Change the color button.
-- **hasBorderRadius** _`boolean`_ - Enabled border radius.
-- **isDisabled** _`boolean`_ - Makes the button not clickable.
-- **onClick** _`() => void`_ - A function that is called when the button is clicked. It receives a MouseEventHandler for handling the click event on the button element.
-- **size** _`string`_ - Change button size.
-- **variant** _`string`_ - Change button style type.
+<Controls />

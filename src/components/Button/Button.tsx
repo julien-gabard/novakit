@@ -1,18 +1,47 @@
 import { FC, MouseEventHandler, ReactElement, ReactNode } from 'react'
 
-import { colorType, sizeType, variantType } from '../../utils'
+import { ColorType, SizeType, VariantType } from '../../utils'
 import { StyledButton } from './styles'
 
 export interface ButtonProps {
-    color: colorType
+    /**
+     * Change button color
+     * @default 'primary'
+     */
+    color: ColorType
+    /**
+     * Button contents
+     */
     children: ReactNode
+    /**
+     * Activate rounded border
+     * @default false
+     */
     hasBorderRadius: boolean
+    /**
+     * Disables use of
+     * @default false
+     */
     isDisabled: boolean
+    /**
+     * Listening to the smile click event
+     */
     onClick?: MouseEventHandler<HTMLButtonElement>
-    size: sizeType
-    variant: variantType
+    /**
+     * Set button size
+     * @default 'medium'
+     */
+    size: SizeType
+    /**
+     * Choose between several button styles
+     * @default 'contained'
+     */
+    variant: VariantType
 }
 
+/**
+ * Buttons allow users to take actions, and make choices, with a single tap.
+ */
 const Button: FC<ButtonProps> = ({
     children,
     color,
