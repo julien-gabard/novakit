@@ -1,5 +1,8 @@
 import type { Preview } from '@storybook/react'
 
+// @ts-ignore
+import DocumentationTemplate from './DocumentationTemplate.mdx'
+
 const preview: Preview = {
     decorators: [
         Story => (
@@ -21,6 +24,9 @@ const preview: Preview = {
                 color: /(background|color)$/i,
                 date: /Date$/,
             },
+        },
+        docs: {
+            page: DocumentationTemplate,
         },
     },
 }
