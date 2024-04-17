@@ -8,7 +8,7 @@ export interface ButtonProps {
      * Change button color
      * @default 'primary'
      */
-    color: ColorType
+    color?: ColorType
     /**
      * Button contents
      */
@@ -17,12 +17,12 @@ export interface ButtonProps {
      * Activate rounded border
      * @default false
      */
-    hasBorderRadius: boolean
+    hasBorderRadius?: boolean
     /**
      * Disables use of
      * @default false
      */
-    isDisabled: boolean
+    isDisabled?: boolean
     /**
      * Listening to the smile click event
      */
@@ -31,12 +31,12 @@ export interface ButtonProps {
      * Set button size
      * @default 'medium'
      */
-    size: SizeType
+    size?: SizeType
     /**
      * Choose between several button styles
      * @default 'contained'
      */
-    variant: VariantType
+    variant?: VariantType
 }
 
 /**

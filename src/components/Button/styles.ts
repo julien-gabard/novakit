@@ -3,10 +3,10 @@ import styled, { css } from 'styled-components'
 import { ColorType, SizeType, VariantType, defaultTheme } from '../../utils'
 
 export interface StyledButtonProps {
-    $color: ColorType
-    $hasBorderRadius: boolean
-    $size: SizeType
-    $variant: VariantType
+    $color?: ColorType
+    $hasBorderRadius?: boolean
+    $size?: SizeType
+    $variant?: VariantType
 }
 
 export const StyledButton = styled.button<StyledButtonProps>`
@@ -20,22 +20,26 @@ export const StyledButton = styled.button<StyledButtonProps>`
 
     -webkit-tap-highlight-color: transparent;
 
-    &:hover {
-        filter: brightness(110%);
-    }
-
     &:disabled {
         cursor: default;
     }
 
     ${({ $color, theme, $variant }) => {
-        const ApplyStyleVariants = (baseColor: string) => {
+        const ApplyStyleVariants = (
+            baseColor: string,
+            textColor: string = '#000000',
+        ) => {
             switch ($variant) {
                 case 'outlined':
                     return css`
                         background: none;
                         border: 1px solid ${baseColor};
                         color: ${baseColor};
+
+                        &:hover {
+                            background: ${baseColor};
+                            color: ${textColor};
+                        }
 
                         &:disabled {
                             border: 1px solid ${theme.colors.disabled.main};
@@ -46,6 +50,11 @@ export const StyledButton = styled.button<StyledButtonProps>`
                     return css`
                         background: ${baseColor};
                         border: none;
+                        color: ${textColor};
+
+                        &:hover {
+                            filter: brightness(110%);
+                        }
 
                         &:disabled {
                             background: ${theme.colors.disabled.main};
@@ -59,7 +68,8 @@ export const StyledButton = styled.button<StyledButtonProps>`
                         color: ${baseColor};
 
                         &:hover {
-                            background: rgba(255, 255, 252, 0.08);
+                            background: ${baseColor};
+                            color: ${textColor};
                         }
 
                         &:disabled {
@@ -82,18 +92,15 @@ export const StyledButton = styled.button<StyledButtonProps>`
                 `
             case 'success':
                 return css`
-                    color: #ffffff;
-                    ${ApplyStyleVariants(theme.colors.alert.success)}
+                    ${ApplyStyleVariants(theme.colors.alert.success, '#ffffff')}
                 `
             case 'danger':
                 return css`
-                    color: #ffffff;
-                    ${ApplyStyleVariants(theme.colors.alert.danger)}
+                    ${ApplyStyleVariants(theme.colors.alert.danger, '#ffffff')}
                 `
             case 'info':
                 return css`
-                    color: #ffffff;
-                    ${ApplyStyleVariants(theme.colors.alert.info)}
+                    ${ApplyStyleVariants(theme.colors.alert.info, '#ffffff')}
                 `
             case 'warning':
                 return css`
