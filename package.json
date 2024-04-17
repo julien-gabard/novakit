@@ -4,7 +4,12 @@
   "author": "JulienGabard <juliengabard.pros@gmail.com>",
   "description": "Library components react, hooks and helpers",
   "license": "MIT",
-  "keywords": ["React", "Hooks", "Helpers", "TypeScript"],
+  "keywords": [
+    "React",
+    "Hooks",
+    "Helpers",
+    "TypeScript"
+  ],
   "scripts": {
     "format": "prettier --write --parser typescript '**/*.{ts,tsx}'",
     "lint": "eslint . --ext .ts,.tsx --ignore-path .gitignore --fix",
