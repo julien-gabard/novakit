@@ -81,8 +81,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
                             color: ${theme.colors.disabled.text};
                         }
                     `
-                default:
-                    return ''
             }
         }
 
@@ -111,8 +109,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
                 return css`
                     ${ApplyStyleVariants(theme.colors.alert.warning)}
                 `
-            default:
-                return ''
         }
     }} {
     }
@@ -131,8 +127,6 @@ export const StyledButton = styled.button<StyledButtonProps>`
                 return css`
                     padding: 0.5rem 1.4rem;
                 `
-            default:
-                return ''
         }
     }}
 `
