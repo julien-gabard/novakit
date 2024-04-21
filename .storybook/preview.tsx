@@ -1,7 +1,6 @@
 import type { Preview } from '@storybook/react'
 import { themes } from '@storybook/theming'
 
-// @ts-ignore
 import DocumentationTemplate from './DocumentationTemplate.mdx'
 
 const preview: Preview = {

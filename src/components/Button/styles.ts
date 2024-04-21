@@ -32,7 +32,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
     ${({ $color, theme, $variant }) => {
         const ApplyStyleVariants = (
             baseColor: string,
-            textColor: string = '#000000',
+            textColor = '#000000',
         ) => {
             switch ($variant) {
                 case 'outlined':

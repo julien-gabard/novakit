@@ -25,6 +25,7 @@
   "exclude": [
     "dist",
     "node_modules",
+    "coverage",
     "src/**/__docs__",
     "src/**/__test__"
   ]
