@@ -1,19 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
 
-import Example from './Example'
+import Button from '../Button'
 
-const meta: Meta<typeof Example> = {
-    title: 'Button',
-    component: Example,
-}
+const meta = {
+    title: 'Design System/Components/Button',
+    component: Button,
+    tags: ['autodocs'],
+} satisfies Meta<typeof Button>
 
-type Story = StoryObj<typeof Example>
+type Story = StoryObj<typeof Button>
 
-export const Button: Story = {
+export const ButtonStory = {
+    name: 'Button',
     args: {
-        text: 'Button',
-        onClick: () => console.log('Button'),
+        color: 'primary',
+        children: 'Button',
+        hasBorderRadius: false,
+        isDisabled: false,
+        onClick: action('on-click'),
+        size: 'medium',
+        variant: 'contained',
     },
-}
+} satisfies Story
 
 export default meta

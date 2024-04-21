@@ -1,11 +1,14 @@
 import type { StorybookConfig } from '@storybook/react-vite'
 
 const config: StorybookConfig = {
-    stories: ['../src/**/__docs__/*.stories.tsx', '../src/**/__docs__/*.mdx'],
+    stories: [
+        './Introduction.mdx',
+        './Licence.mdx',
+        '../src/**/__docs__/*.stories.tsx',
+    ],
     addons: [
         '@storybook/addon-links',
         '@storybook/addon-essentials',
-        '@storybook/addon-onboarding',
         '@storybook/addon-interactions',
     ],
     framework: {
@@ -14,6 +17,7 @@ const config: StorybookConfig = {
     },
     docs: {
         autodocs: 'tag',
+        defaultName: 'Documentation',
     },
 }
 export default config

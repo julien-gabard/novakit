@@ -1,17 +1,80 @@
-import { FC, MouseEventHandler, ReactElement } from 'react'
-import styled from 'styled-components'
+import { FC, MouseEventHandler, ReactElement, ReactNode } from 'react'
 
-export type ButtonProps = {
-    text?: string
+import { ColorType, SizeType, VariantType } from '../../utils'
+import { StyledButton } from './styles'
+
+export interface ButtonProps {
+    /**
+     * Change button color
+     *
+     * @default 'primary'
+     */
+    color?: ColorType
+    /**
+     * Button contents
+     */
+    children: ReactNode
+    /**
+     * Activate rounded border
+     *
+     * @default false
+     */
+    hasBorderRadius?: boolean
+    /**
+     * Disables use of
+     *
+     * @default false
+     */
+    isDisabled?: boolean
+    /**
+     * Listening to the smile click event
+     */
     onClick?: MouseEventHandler<HTMLButtonElement>
+    /**
+     * Set button size
+     *
+     * @default 'medium'
+     */
+    size?: SizeType
+    /**
+     * Choose between several button styles
+     *
+     * @default 'contained'
+     */
+    variant?: VariantType
 }
 
-const StyledButton = styled.button<ButtonProps>``
-
-const Button: FC<ButtonProps> = ({ onClick, text }): ReactElement => (
-    <StyledButton type='button' onClick={onClick}>
-        {text}
+/**
+ * Buttons allow users to take actions, and make choices, with a single tap.
+ */
+const Button: FC<ButtonProps> = ({
+    children,
+    color,
+    hasBorderRadius,
+    isDisabled,
+    onClick,
+    size,
+    variant,
+}): ReactElement => (
+    <StyledButton
+        type='button'
+        $color={color}
+        disabled={isDisabled}
+        $hasBorderRadius={hasBorderRadius}
+        onClick={onClick}
+        $size={size}
+        $variant={variant}
+    >
+        {children}
     </StyledButton>
 )
+
+Button.defaultProps = {
+    color: 'primary',
+    hasBorderRadius: false,
+    isDisabled: false,
+    size: 'medium',
+    variant: 'contained',
+}
 
 export default Button

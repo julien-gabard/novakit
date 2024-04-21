@@ -5,6 +5,9 @@ node_modules
 dist
 storybook-static
 
+# Test
+coverage
+
 # Misc
 novakit.iml
 .idea
