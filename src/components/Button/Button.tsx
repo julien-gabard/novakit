@@ -6,6 +6,7 @@ import { StyledButton } from './styles'
 export interface ButtonProps {
     /**
      * Change button color
+     *
      * @default 'primary'
      */
     color?: ColorType
@@ -15,11 +16,13 @@ export interface ButtonProps {
     children: ReactNode
     /**
      * Activate rounded border
+     *
      * @default false
      */
     hasBorderRadius?: boolean
     /**
      * Disables use of
+     *
      * @default false
      */
     isDisabled?: boolean
@@ -29,11 +32,13 @@ export interface ButtonProps {
     onClick?: MouseEventHandler<HTMLButtonElement>
     /**
      * Set button size
+     *
      * @default 'medium'
      */
     size?: SizeType
     /**
      * Choose between several button styles
+     *
      * @default 'contained'
      */
     variant?: VariantType
