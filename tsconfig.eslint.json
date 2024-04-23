@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    ".storybook/*",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    ".github",
+    ".husky",
+    "coverage",
+    "dist"
+  ]
+}
