@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "include": [
     ".storybook/*",
-    "src/**/*"
+    "src/**/*",
   ],
   "exclude": [
     "node_modules",
