@@ -3,7 +3,7 @@ import { FC, MouseEventHandler, ReactElement, ReactNode } from 'react'
 import { ColorType, SizeType, VariantType } from '../../utils'
 import { StyledButton } from './styles'
 
-export interface ButtonProps {
+export interface IButtonProps {
     /**
      * Change button color
      *
@@ -47,7 +47,7 @@ export interface ButtonProps {
 /**
  * Buttons allow users to take actions, and make choices, with a single tap.
  */
-const Button: FC<ButtonProps> = ({
+const Button: FC<IButtonProps> = ({
     children,
     color,
     hasBorderRadius,

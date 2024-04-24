@@ -2,14 +2,14 @@ import styled, { css } from 'styled-components'
 
 import { ColorType, SizeType, VariantType, defaultTheme } from '../../utils'
 
-export interface StyledButtonProps {
+export interface IStyledButtonProps {
     $color?: ColorType
     $hasBorderRadius?: boolean
     $size?: SizeType
     $variant?: VariantType
 }
 
-export const StyledButton = styled.button<StyledButtonProps>`
+export const StyledButton = styled.button<IStyledButtonProps>`
     align-items: center;
     border-radius: ${({ $hasBorderRadius }) => ($hasBorderRadius ? '20px' : 0)};
     cursor: pointer;
