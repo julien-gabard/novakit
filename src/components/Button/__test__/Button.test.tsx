@@ -9,7 +9,7 @@ describe('Button component', () => {
     /**
      * Event onClick Button
      */
-    it('calls onClick when clicked', async () => {
+    it('calls onClick when clicked', () => {
         const onClickMock = vi.fn()
         const { getByText } = render(
             <Button onClick={onClickMock}>Click me</Button>,
@@ -24,7 +24,7 @@ describe('Button component', () => {
     /**
      * Default Button
      */
-    it('renders correctly default', async () => {
+    it('renders correctly default', () => {
         render(<Button>Button</Button>)
         const button = screen.getByRole('button')
 
@@ -34,13 +34,13 @@ describe('Button component', () => {
     /**
      * Props variant
      */
-    it('renders correctly variant outlined', async () => {
+    it('renders correctly variant outlined', () => {
         render(<Button variant='outlined'>Button</Button>)
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()
     })
-    it('renders correctly variant text', async () => {
+    it('renders correctly variant text', () => {
         render(<Button variant='text'>Button</Button>)
         const button = screen.getByRole('button')
 
@@ -50,31 +50,31 @@ describe('Button component', () => {
     /**
      * Props color
      */
-    it('renders correctly color secondary', async () => {
+    it('renders correctly color secondary', () => {
         render(<Button color='secondary'>Button</Button>)
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()
     })
-    it('renders correctly color success', async () => {
+    it('renders correctly color success', () => {
         render(<Button color='success'>Button</Button>)
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()
     })
-    it('renders correctly color info', async () => {
+    it('renders correctly color info', () => {
         render(<Button color='info'>Button</Button>)
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()
     })
-    it('renders correctly color danger', async () => {
+    it('renders correctly color danger', () => {
         render(<Button color='danger'>Button</Button>)
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()
     })
-    it('renders correctly color warning', async () => {
+    it('renders correctly color warning', () => {
         render(<Button color='warning'>Button</Button>)
         const button = screen.getByRole('button')
 
@@ -84,13 +84,13 @@ describe('Button component', () => {
     /**
      * Props size
      */
-    it('renders correctly size small', async () => {
+    it('renders correctly size small', () => {
         render(<Button size='small'>Button</Button>)
         const button = screen.getByRole('button')
 
         expect(button).toBeInTheDocument()
     })
-    it('renders correctly size large', async () => {
+    it('renders correctly size large', () => {
         render(<Button size='large'>Button</Button>)
         const button = screen.getByRole('button')
 
@@ -100,7 +100,7 @@ describe('Button component', () => {
     /**
      * Props hasBorderRadius
      */
-    it('renders correctly rounded', async () => {
+    it('renders correctly rounded', () => {
         render(<Button hasBorderRadius>Button</Button>)
         const button = screen.getByRole('button')
 
@@ -110,7 +110,7 @@ describe('Button component', () => {
     /**
      * Props isDisabled
      */
-    it('renders correctly disabled', async () => {
+    it('renders correctly disabled', () => {
         render(<Button isDisabled>Button</Button>)
         const button = screen.getByRole('button')
 

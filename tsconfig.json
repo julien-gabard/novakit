@@ -25,6 +25,9 @@
   "exclude": [
     "dist",
     "node_modules",
+    "coverage",
+    ".github",
+    ".husky",
     "src/**/__docs__",
     "src/**/__test__"
   ]
