@@ -47,8 +47,8 @@ export const StyledButton = styled.button<StyledButtonProps>`
                         }
 
                         &:disabled {
-                            border: 1px solid ${theme.colors.disabled.main};
-                            color: ${theme.colors.disabled.text};
+                            border: 1px solid ${theme.palette.disabled.main};
+                            color: ${theme.palette.disabled.contrastText};
                         }
                     `
                 case 'contained':
@@ -62,8 +62,8 @@ export const StyledButton = styled.button<StyledButtonProps>`
                         }
 
                         &:disabled {
-                            background: ${theme.colors.disabled.main};
-                            color: ${theme.colors.disabled.text};
+                            background: ${theme.palette.disabled.main};
+                            color: ${theme.palette.disabled.contrastText};
                         }
                     `
                 case 'text':
@@ -78,7 +78,7 @@ export const StyledButton = styled.button<StyledButtonProps>`
                         }
 
                         &:disabled {
-                            color: ${theme.colors.disabled.text};
+                            color: ${theme.palette.disabled.contrastText};
                         }
                     `
             }
@@ -87,27 +87,30 @@ export const StyledButton = styled.button<StyledButtonProps>`
         switch ($color) {
             case 'primary':
                 return css`
-                    ${ApplyStyleVariants(theme.colors.primary)}
+                    ${ApplyStyleVariants(theme.palette.primary.main)}
                 `
             case 'secondary':
                 return css`
-                    ${ApplyStyleVariants(theme.colors.secondary)}
+                    ${ApplyStyleVariants(theme.palette.secondary.main)}
                 `
             case 'success':
                 return css`
-                    ${ApplyStyleVariants(theme.colors.alert.success, '#ffffff')}
+                    ${ApplyStyleVariants(
+                        theme.palette.alert.success,
+                        '#ffffff',
+                    )}
                 `
             case 'danger':
                 return css`
-                    ${ApplyStyleVariants(theme.colors.alert.danger, '#ffffff')}
+                    ${ApplyStyleVariants(theme.palette.alert.danger, '#ffffff')}
                 `
             case 'info':
                 return css`
-                    ${ApplyStyleVariants(theme.colors.alert.info, '#ffffff')}
+                    ${ApplyStyleVariants(theme.palette.alert.info, '#ffffff')}
                 `
             case 'warning':
                 return css`
-                    ${ApplyStyleVariants(theme.colors.alert.warning)}
+                    ${ApplyStyleVariants(theme.palette.alert.warning)}
                 `
         }
     }} {

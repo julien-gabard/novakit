@@ -7,6 +7,16 @@ export default tseslint.config(
     ...tseslint.configs.recommendedTypeChecked,
     ...tseslint.configs.stylisticTypeChecked,
     {
+        ignores: [
+            'coverage',
+            'dist',
+            'node_modules',
+            '.idea',
+            '.github',
+            '.husky',
+        ],
+    },
+    {
         languageOptions: {
             parserOptions: {
                 project: './tsconfig.eslint.json',
