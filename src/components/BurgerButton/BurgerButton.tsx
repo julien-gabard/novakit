@@ -1,47 +1,83 @@
-import { FC } from 'react'
+import { FC, MouseEventHandler } from 'react'
 
 import { ButtonStyled, PathStyled } from './styles'
 import { ColorType } from '../../utils'
 import getThemeColor from '../../helpers/getThemeColor.ts'
 
 export interface IBurgerButtonProps {
-    color: ColorType
-    isActive: boolean
-    size: number
-    strokeWidth: number
+    /**
+     * Changes the color of the button strokes
+     *
+     * @default 'primary'
+     */
+    color?: ColorType
+    /**
+     * Activates button animation to indicate open or close state
+     *
+     * @default false
+     */
+    isActive?: boolean
+    /**
+     * Rounding stroke edges
+     *
+     * @default false
+     */
+    isRounded?: boolean
+    /**
+     * Listening to the smile click event
+     */
+    onClick?: MouseEventHandler<HTMLButtonElement>
+    /**
+     * Sets button size to width and length
+     *
+     * @default 50
+     */
+    size?: number
+    /**
+     * Increases line thickness
+     *
+     * @default 5
+     */
+    strokeWidth?: number
 }
 
+const coordinatesPath: string[] = [
+    'M20 29H80.0002C80.0002 29 94.4988 28.8174 94.533 66.7113 94.5431 77.9807 93 82 85.2592 81.669 82 82 75.0002 74.9999 75.0002 74.9999L25 25.0001',
+    'M20 50H80',
+    'M20 71H80.0002C80.0002 71 94.4988 71.1826 94.533 33.2887 94.5431 22.0193 92 18 85.2592 18.331 81 18 75.0002 25.0001 75.0002 25.0001L25 74.9999',
+]
+
+/**
+ * Animated burger button indicating open or close action
+ */
 const BurgerButton: FC<IBurgerButtonProps> = ({
     color,
     isActive,
+    isRounded,
+    onClick,
     size,
     strokeWidth,
 }) => (
-    <ButtonStyled aria-label='Button open the menu' type='button'>
+    <ButtonStyled
+        aria-label='Button open the menu'
+        type='button'
+        onClick={onClick}
+    >
         <svg
             width={size}
             height={size}
             stroke={getThemeColor(color)}
             viewBox='0 0 100 100'
         >
-            <PathStyled
-                strokeWidth={strokeWidth}
-                $lineNumber={1}
-                $isActive={isActive}
-                d='M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058'
-            />
-            <PathStyled
-                strokeWidth={strokeWidth}
-                $lineNumber={2}
-                $isActive={isActive}
-                d='M 20,50 H 80'
-            />
-            <PathStyled
-                strokeWidth={strokeWidth}
-                $lineNumber={3}
-                $isActive={isActive}
-                d='M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942'
-            />
+            {coordinatesPath.map((coordinate, index) => (
+                <PathStyled
+                    strokeWidth={strokeWidth}
+                    $lineNumber={index}
+                    $isActive={isActive}
+                    $isRounded={isRounded}
+                    d={coordinate}
+                />
+            ))}
         </svg>
     </ButtonStyled>
 )
@@ -49,6 +85,7 @@ const BurgerButton: FC<IBurgerButtonProps> = ({
 BurgerButton.defaultProps = {
     color: 'primary',
     isActive: false,
+    isRounded: false,
     size: 50,
     strokeWidth: 5,
 }

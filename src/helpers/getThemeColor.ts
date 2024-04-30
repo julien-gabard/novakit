@@ -1,6 +1,9 @@
 import { ColorType, defaultTheme } from '../utils'
 
-const getThemeColor = (color: ColorType): string => {
+/**
+ * Returns the color associated with the theme
+ */
+const getThemeColor = (color?: ColorType): string => {
     switch (color) {
         case 'primary':
             return defaultTheme.palette.primary.main
