@@ -1,4 +1,7 @@
+// Waiting for a component that will use a default theme and to see how to set a default theme without using a provider
 import 'styled-components'
+
+import { DefaultTheme } from 'styled-components'
 
 interface IPalette {
     main: string
@@ -8,20 +11,19 @@ interface IPalette {
 declare module 'styled-components' {
     export interface DefaultTheme {
         palette: {
-            primary: IPalette
-            secondary: IPalette
-            disabled: IPalette
             alert: {
                 success: string
                 danger: string
                 warning: string
                 info: string
             }
+            primary: IPalette
+            secondary: IPalette
         }
     }
 }
 
-const defaultTheme = {
+const defaultTheme: DefaultTheme = {
     palette: {
         alert: {
             success: '#21873D',
@@ -36,10 +38,6 @@ const defaultTheme = {
         secondary: {
             main: '#e8bcb9',
             contrastText: '#ffffff',
-        },
-        disabled: {
-            main: 'rgba(255, 255, 255, 0.12)',
-            contrastText: 'rgba(255, 255, 255, 0.3)',
         },
     },
 }
