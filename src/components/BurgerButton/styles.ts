@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 
 interface IPathStyledProps {
     $lineNumber: number
-    $isActive?: boolean
+    $isActive: boolean
     $isRounded?: boolean
 }
 

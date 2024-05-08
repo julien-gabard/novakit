@@ -26,7 +26,7 @@ export interface IBurgerButtonProps {
      */
     onClick?: MouseEventHandler<HTMLButtonElement>
     /**
-     * Sets button size to width and length
+     * Sets button size to width and height
      *
      * @default 50
      */
