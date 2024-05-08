@@ -9,6 +9,8 @@ const meta = {
     tags: ['autodocs'],
 } satisfies Meta<typeof BurgerButton>
 
+export default meta
+
 type Story = StoryObj<typeof BurgerButton>
 
 export const ButtonStory = {
@@ -20,10 +22,6 @@ export const ButtonStory = {
             updateArgs({ isActive: !isActive })
         }
 
-        return (
-            <BurgerButton {...args} onClick={handleClick} isActive={isActive} />
-        )
+        return <BurgerButton {...args} onClick={handleClick} />
     },
 } satisfies Story
-
-export default meta
