@@ -8,19 +8,19 @@ export interface IBurgerButtonProps {
      *
      * @default 'primary'
      */
-    color: string
+    color?: string
     /**
      * Activates button animation to indicate open or close state
      *
      * @default false
      */
-    isActive: boolean
+    isActive?: boolean
     /**
      * Rounding stroke edges
      *
      * @default false
      */
-    isRounded: boolean
+    isRounded?: boolean
     /**
      * Listening to the smile click event
      */
@@ -30,13 +30,13 @@ export interface IBurgerButtonProps {
      *
      * @default 50
      */
-    size: number
+    size?: number
     /**
      * Increases line thickness
      *
      * @default 5
      */
-    strokeWidth: number
+    strokeWidth?: number
 }
 
 const coordinatesPath: { id: string; d: string; lineNumber: number }[] = [
