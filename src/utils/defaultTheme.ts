@@ -1,4 +1,7 @@
+// Waiting for a component that will use a default theme and to see how to set a default theme without using a provider
 import 'styled-components'
+
+import { DefaultTheme } from 'styled-components'
 
 interface IPalette {
     main: string
@@ -7,33 +10,20 @@ interface IPalette {
 
 declare module 'styled-components' {
     export interface DefaultTheme {
-        delay: {
-            default: string
-        }
-        duration: {
-            default: string
-            medium: string
-        }
         palette: {
-            primary: IPalette
-            secondary: IPalette
-            disabled: IPalette
             alert: {
                 success: string
                 danger: string
                 warning: string
                 info: string
             }
-        }
-        timingFunction: {
-            default: string
-            cubicBezier: string
-            cubicBezier2: string
+            primary: IPalette
+            secondary: IPalette
         }
     }
 }
 
-const defaultTheme = {
+const defaultTheme: DefaultTheme = {
     palette: {
         alert: {
             success: '#21873D',
@@ -49,22 +39,6 @@ const defaultTheme = {
             main: '#e8bcb9',
             contrastText: '#ffffff',
         },
-        disabled: {
-            main: 'rgba(255, 255, 255, 0.12)',
-            contrastText: 'rgba(255, 255, 255, 0.3)',
-        },
-    },
-    timingFunction: {
-        default: 'ease-in-out',
-        cubicBezier: 'cubic-bezier(0.68, -0.6, 0.32, 1.6)',
-        cubicBezier2: 'cubic-bezier(0.4, 0, 0.2, 1)',
-    },
-    duration: {
-        default: '300ms',
-        medium: '600ms',
-    },
-    delay: {
-        default: '300ms',
     },
 }
 
