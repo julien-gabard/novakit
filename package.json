@@ -46,6 +46,7 @@
       "npm run test"
     ]
   },
+  "packageManager": "yarn@1.22.22",
   "resolutions": {
     "styled-components": "^5"
   },
