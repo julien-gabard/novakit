@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES5",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "declaration": true,
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": [
     "dist",
     "node_modules",

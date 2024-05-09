@@ -1,1 +1,1 @@
-export { default as BurgerButton } from './BurgerButton.tsx'
+export { default as BurgerButton } from './BurgerButton'
