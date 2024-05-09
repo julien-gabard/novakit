@@ -1,1 +1,6 @@
-export * from './BurgerButton'
+// ATOMS
+export * from './atoms/BurgerButton'
+
+// MOLECULES
+
+// ORGANISMS

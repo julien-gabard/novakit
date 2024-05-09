@@ -4,7 +4,7 @@ import { useArgs } from '@storybook/preview-api'
 import BurgerButton from '../BurgerButton'
 
 const meta = {
-    title: 'Design System/Components/Burger',
+    title: 'Design System/Atoms/Burger',
     component: BurgerButton,
     tags: ['autodocs'],
 } satisfies Meta<typeof BurgerButton>

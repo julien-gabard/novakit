@@ -1,6 +1,6 @@
 import { FC, MouseEventHandler, useMemo } from 'react'
 
-import * as Styled from './styles'
+import * as Styled from './styles.ts'
 
 export interface IBurgerButtonProps {
     /**
