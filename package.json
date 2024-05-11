@@ -48,7 +48,7 @@
   },
   "packageManager": "yarn@1.22.22",
   "resolutions": {
-    "styled-components": "^5"
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
     "@eslint/js": "^9.2.0",
@@ -64,7 +64,7 @@
     "@storybook/theming": "^8.0.10",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^15.0.7",
-    "@types/react": "^18.3.1",
+    "@types/react": "^18.3.2",
     "@types/react-dom": "^18.3.0",
     "@vitest/coverage-istanbul": "^1.6.0",
     "@vitest/ui": "^1.6.0",
@@ -87,6 +87,7 @@
   },
   "peerDependencies": {
     "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "react-dom": "^17.0.0 || ^18.0.0",
+    "styled-components": "^6.1.11"
   }
 }
