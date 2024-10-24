@@ -5,6 +5,7 @@ const config: StorybookConfig = {
         './Introduction.mdx',
         './Licence.mdx',
         '../src/**/__docs__/*.stories.tsx',
+        '../src/**/__docs__/*.mdx',
     ],
     addons: [
         '@storybook/addon-links',

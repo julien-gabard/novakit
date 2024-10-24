@@ -6,7 +6,7 @@ export interface IBurgerButtonProps {
     /**
      * Changes the color of the button strokes
      *
-     * @default 'primary'
+     * @default '#FFFFFF'
      */
     color?: string
     /**

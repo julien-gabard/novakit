@@ -1,0 +1,31 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="hooks/useMediaQuery" />
+
+# useMediaQuery
+
+Is a hook for responding to CSS media queries in JavaScript.
+
+It evaluates a device string and returns a boolean indicating whether the query matches.
+
+### Devices
+
+- mobileS = (max-width: 320px),
+- mobileM = (max-width: 375px),
+- mobileL = (max-width: 425px),
+- tablet = (max-width: 768px),
+- laptop = (max-width: 1024px),
+- laptopL = (max-width: 1440px),
+- desktop = (max-width: 2560px),
+
+### Example of use
+
+```ts
+import { useMediaQuery } from '@julien-gabard/novakit'
+
+const Example = () => {
+    const isTable = useMediaQuery('tablet')
+
+    return ...
+}
+```
